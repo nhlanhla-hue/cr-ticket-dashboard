@@ -1,7 +1,7 @@
 // ╔══════════════════════════════════════════════════════════════╗
 // ║  C+R TICKET SALES DATA — UPDATE THIS FILE ONLY             ║
 // ║  Last updated: 18 April 2026                                ║
-// ║  Source: C_R_TICKET_SALES spreadsheet as of 17/04/2026      ║
+// ║  Source: C_R_TICKET_SALES spreadsheet as of 18/04/2026      ║
 // ╚══════════════════════════════════════════════════════════════╝
 
 export const DATA = {
@@ -20,7 +20,8 @@ export const DATA = {
       { name: "Mayi De La Vega", tickets: 2, amount: 440, date: "10/04", fee: 15.40 },
       { name: "Mayi De La Vega", tickets: 1, amount: 220, date: "10/04", fee: 7.70 },
       { name: "Doug Mcglynn", tickets: 1, amount: 220, date: "16/04", fee: 5.14 },
-      { name: "Nicole Noonan", tickets: 2, amount: 440, date: "17/04", fee: 15.40 },
+      { name: "Nicole Noonan", tickets: 2, amount: 440, date: "17/04", fee: 9.98 },
+      { name: "Agi Smith", tickets: 1, amount: 220, date: "18/04", fee: 7.70 },
     ],
   },
 
@@ -37,7 +38,7 @@ export const DATA = {
       { name: "Lauren Silverstein", tickets: 1, amount: 220, date: "02/04", fee: 5.14 },
       { name: "Emma Vernetti", tickets: 1, amount: 220, date: "07/04", fee: 7.34 },
       { name: "Katherine Tashjian", tickets: 2, amount: 440, date: "14/04", fee: 15.40 },
-      { name: "Evelina Leviev", tickets: 1, amount: 220, date: "17/04", fee: 7.70 },
+      { name: "Evelina Leviev", tickets: 1, amount: 220, date: "17/04", fee: 9.90 },
     ],
   },
 
