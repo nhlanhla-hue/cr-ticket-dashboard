@@ -1,11 +1,11 @@
 // ╔══════════════════════════════════════════════════════════════╗
 // ║  C+R TICKET SALES DATA — UPDATE THIS FILE ONLY             ║
-// ║  Last updated: 19 April 2026                                ║
-// ║  Source: C_R_TICKET_SALES spreadsheet as of 19/04/2026      ║
+// ║  Last updated: 20 April 2026                                ║
+// ║  Source: C_R_TICKET_SALES spreadsheet as of 20/04/2026      ║
 // ╚══════════════════════════════════════════════════════════════╝
 
 export const DATA = {
-  lastUpdated: "19 April 2026",
+  lastUpdated: "20 April 2026",
   exchangeRate: 0.737,
 
   // ── PALM BEACH ──────────────────────────────────────────
@@ -39,6 +39,7 @@ export const DATA = {
       { name: "Emma Vernetti", tickets: 1, amount: 220, date: "07/04", fee: 7.34 },
       { name: "Katherine Tashjian", tickets: 2, amount: 440, date: "14/04", fee: 15.40 },
       { name: "Evelina Leviev", tickets: 1, amount: 220, date: "17/04", fee: 9.90 },
+      { name: "Lauren Netter", tickets: 1, amount: 220, date: "20/04", fee: 5.14 },
     ],
   },
 
@@ -75,6 +76,8 @@ export const DATA = {
       { name: "Stacey Cooper", tickets: 2, amount: 900, date: "17/04", fee: 31.50 },
       { name: "R Lee Krelstein Jr", tickets: 2, amount: 900, date: "19/04", fee: 20.10 },
       { name: "Nicole Thalacker", tickets: 2, amount: 900, date: "19/04", fee: 31.50 },
+      { name: "Margarita Bravo", tickets: 2, amount: 900, date: "20/04", fee: 31.50 },
+      { name: "Thomas F Shannon", tickets: 6, amount: 3000, date: "20/04", fee: 66.30, vip: "VIP Table of 6" },
     ],
   },
 
