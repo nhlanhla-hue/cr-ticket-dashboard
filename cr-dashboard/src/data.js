@@ -1,12 +1,12 @@
 // ╔══════════════════════════════════════════════════════════════╗
 // ║  C+R TICKET SALES DATA — UPDATE THIS FILE ONLY             ║
 // ║  Last updated: 20 April 2026                                ║
-// ║  Source: C_R_TICKET_SALES spreadsheet as of 20/04/2026      ║
+// ║  Source: C_R_TICKET_SALES spreadsheet + SUM005 invoice      ║
 // ╚══════════════════════════════════════════════════════════════╝
 
 export const DATA = {
   lastUpdated: "20 April 2026",
-  exchangeRate: 0.737,
+  exchangeRate: 0.74,
 
   // ── PALM BEACH ──────────────────────────────────────────
   palmBeach: {
@@ -87,5 +87,6 @@ export const DATA = {
     { ref: "SUM002", amount: 5182.22, gbp: 3910.99, rate: 0.75, date: "30/03/26" },
     { ref: "SUM003", amount: 12873.27, gbp: 9654.95, rate: 0.75, date: "09/04/26" },
     { ref: "SUM004", amount: 9097.31, gbp: 6732.01, rate: 0.74, date: "16/04/26" },
+    { ref: "SUM005", amount: 7926.18, gbp: 5865.37, rate: 0.74, date: "20/04/26" },
   ],
 };
