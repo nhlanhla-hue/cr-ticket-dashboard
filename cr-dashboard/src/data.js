@@ -24,6 +24,7 @@ export const DATA = {
       { name: "Agi Smith", tickets: 1, amount: 220, date: "18/04", fee: 7.70 },
       { name: "Mark Chrwin", tickets: 1, amount: 220, date: "21/04", fee: 5.14 },
       { name: "Steven Swarzman", tickets: 1, amount: 220, date: "21/04", fee: 5.14 },
+      { name: "Mitchell Krieget", tickets: 1, amount: 220, date: "21/04", fee: 5.14 },
     ],
   },
 
@@ -43,6 +44,7 @@ export const DATA = {
       { name: "Evelina Leviev", tickets: 1, amount: 220, date: "17/04", fee: 9.90 },
       { name: "Lauren Netter", tickets: 1, amount: 220, date: "20/04", fee: 5.14 },
       { name: "Brian Corman", tickets: 1, amount: 220, date: "20/04", fee: 7.70 },
+      { name: "Emily Schaible", tickets: 1, amount: 220, date: "21/04", fee: 7.70 },
     ],
   },
 
@@ -82,6 +84,7 @@ export const DATA = {
       { name: "Margarita Bravo", tickets: 2, amount: 900, date: "20/04", fee: 31.50 },
       { name: "Thomas F Shannon", tickets: 6, amount: 3000, date: "20/04", fee: 66.30, vip: "VIP Table of 6" },
       { name: "Laura Khanna", tickets: 2, amount: 900, date: "20/04", fee: 31.50 },
+      { name: "Guita Mortinger", tickets: 2, amount: 900, date: "21/04", fee: 20.10 },
     ],
   },
 
@@ -93,4 +96,5 @@ export const DATA = {
     { ref: "SUM004", amount: 9097.31, gbp: 6732.01, rate: 0.74, date: "16/04/26" },
     { ref: "SUM005", amount: 7926.18, gbp: 5865.37, rate: 0.74, date: "20/04/26" },
   ],
+};
 };
