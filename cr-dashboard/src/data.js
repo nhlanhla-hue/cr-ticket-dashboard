@@ -1,11 +1,11 @@
 // ╔══════════════════════════════════════════════════════════════╗
 // ║  C+R TICKET SALES DATA — UPDATE THIS FILE ONLY             ║
-// ║  Last updated: 20 April 2026                                ║
-// ║  Source: C_R_TICKET_SALES spreadsheet + SUM005 invoice      ║
+// ║  Last updated: 21 April 2026                                ║
+// ║  Source: C_R_TICKET_SALES spreadsheet as of 21/04/2026      ║
 // ╚══════════════════════════════════════════════════════════════╝
 
 export const DATA = {
-  lastUpdated: "20 April 2026",
+  lastUpdated: "21 April 2026",
   exchangeRate: 0.74,
 
   // ── PALM BEACH ──────────────────────────────────────────
@@ -22,6 +22,8 @@ export const DATA = {
       { name: "Doug Mcglynn", tickets: 1, amount: 220, date: "16/04", fee: 5.14 },
       { name: "Nicole Noonan", tickets: 2, amount: 440, date: "17/04", fee: 9.98 },
       { name: "Agi Smith", tickets: 1, amount: 220, date: "18/04", fee: 7.70 },
+      { name: "Mark Chrwin", tickets: 1, amount: 220, date: "21/04", fee: 5.14 },
+      { name: "Steven Swarzman", tickets: 1, amount: 220, date: "21/04", fee: 5.14 },
     ],
   },
 
