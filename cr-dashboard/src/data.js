@@ -97,4 +97,3 @@ export const DATA = {
     { ref: "SUM005", amount: 7926.18, gbp: 5865.37, rate: 0.74, date: "20/04/26" },
   ],
 };
-};
