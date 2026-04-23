@@ -25,6 +25,7 @@ export const DATA = {
       { name: "Mark Chrwin", tickets: 1, amount: 220, date: "21/04", fee: 5.14 },
       { name: "Steven Swarzman", tickets: 1, amount: 220, date: "21/04", fee: 5.14 },
       { name: "Mitchell Krieget", tickets: 1, amount: 220, date: "21/04", fee: 5.14 },
+      { name: "Harwinder Parmar", tickets: 1, amount: 220, date: "22/04", fee: 7.34 },
     ],
   },
 
@@ -45,6 +46,10 @@ export const DATA = {
       { name: "Lauren Netter", tickets: 1, amount: 220, date: "20/04", fee: 5.14 },
       { name: "Brian Corman", tickets: 1, amount: 220, date: "20/04", fee: 7.70 },
       { name: "Emily Schaible", tickets: 1, amount: 220, date: "21/04", fee: 7.70 },
+      { name: "Tara Bergaz", tickets: 1, amount: 220, date: "22/04", fee: 7.70 },
+      { name: "Alex Thompson", tickets: 2, amount: 440, date: "22/04", fee: 9.98 },
+      { name: "Joshua Lee", tickets: 2, amount: 440, date: "22/04", fee: 9.98 },
+      { name: "Timothy J Weldon", tickets: 2, amount: 440, date: "22/04", fee: 9.98 },
     ],
   },
 
@@ -84,8 +89,8 @@ export const DATA = {
       { name: "Margarita Bravo", tickets: 2, amount: 900, date: "20/04", fee: 31.50 },
       { name: "Thomas F Shannon", tickets: 6, amount: 3000, date: "20/04", fee: 66.30, vip: "VIP Table of 6" },
       { name: "Laura Khanna", tickets: 2, amount: 900, date: "20/04", fee: 31.50 },
-      { name: "Guita Mortinger", tickets: 2, amount: 900, date: "21/04", fee: 20.10 },
-      { name: "Guita Mortinger", tickets: 1, amount: 450, date: "22/04", fee: 10.20 },
+      { name: "Guita Mortinger", tickets: 3, amount: 1350, date: "21/04", fee: 20.10 },
+      { name: "Ashley Arguello", tickets: 1, amount: 450, date: "22/04", fee: 15.75 },
     ],
   },
 
