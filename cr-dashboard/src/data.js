@@ -1,11 +1,11 @@
 // ╔══════════════════════════════════════════════════════════════╗
 // ║  C+R TICKET SALES DATA — UPDATE THIS FILE ONLY             ║
-// ║  Last updated: 22 April 2026                                ║
-// ║  Source: C_R_TICKET_SALES spreadsheet as of 22/04/2026      ║
+// ║  Last updated: 24 April 2026                                ║
+// ║  Source: C_R_TICKET_SALES spreadsheet as of 24/04/2026      ║
 // ╚══════════════════════════════════════════════════════════════╝
 
 export const DATA = {
-  lastUpdated: "22 April 2026",
+  lastUpdated: "24 April 2026",
   exchangeRate: 0.74,
 
   // ── PALM BEACH ──────────────────────────────────────────
@@ -26,6 +26,8 @@ export const DATA = {
       { name: "Steven Swarzman", tickets: 1, amount: 220, date: "21/04", fee: 5.14 },
       { name: "Mitchell Krieget", tickets: 1, amount: 220, date: "21/04", fee: 5.14 },
       { name: "Harwinder Parmar", tickets: 1, amount: 220, date: "22/04", fee: 7.34 },
+      { name: "Rodriguez Brindicci", tickets: 1, amount: 220, date: "23/04", fee: 7.70 },
+      { name: "Michael R Hein", tickets: 1, amount: 220, date: "23/04", fee: 7.70 },
     ],
   },
 
@@ -50,6 +52,7 @@ export const DATA = {
       { name: "Alex Thompson", tickets: 2, amount: 440, date: "22/04", fee: 9.98 },
       { name: "Joshua Lee", tickets: 2, amount: 440, date: "22/04", fee: 9.98 },
       { name: "Timothy J Weldon", tickets: 2, amount: 440, date: "22/04", fee: 9.98 },
+      { name: "Stephanie Thomas", tickets: 3, amount: 660, date: "23/04", fee: 23.10 },
     ],
   },
 
@@ -91,6 +94,11 @@ export const DATA = {
       { name: "Laura Khanna", tickets: 2, amount: 900, date: "20/04", fee: 31.50 },
       { name: "Guita Mortinger", tickets: 3, amount: 1350, date: "21/04", fee: 20.10 },
       { name: "Ashley Arguello", tickets: 1, amount: 450, date: "22/04", fee: 15.75 },
+      { name: "Sebastian MP", tickets: 2, amount: 900, date: "23/04", fee: 20.10 },
+      { name: "Bobby Serpentini", tickets: 4, amount: 1800, date: "23/04", fee: 63.00 },
+      { name: "Kim Perell", tickets: 3, amount: 1350, date: "23/04", fee: 47.25 },
+      { name: "Jason Clarke", tickets: 1, amount: 450, date: "23/04", fee: 10.20 },
+      { name: "Teresa Blumbergevents", tickets: 1, amount: 450, date: "23/04", fee: 10.20 },
     ],
   },
 
