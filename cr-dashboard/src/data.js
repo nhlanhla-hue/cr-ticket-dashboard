@@ -1,7 +1,7 @@
 // ╔══════════════════════════════════════════════════════════════╗
 // ║  C+R TICKET SALES DATA — UPDATE THIS FILE ONLY             ║
 // ║  Last updated: 25 April 2026                                ║
-// ║  Source: C_R_TICKET_SALES spreadsheet + SUM006 invoice      ║
+// ║  Source: C_R_TICKET_SALES spreadsheet as of 25/04/2026      ║
 // ╚══════════════════════════════════════════════════════════════╝
 
 export const DATA = {
@@ -29,6 +29,9 @@ export const DATA = {
       { name: "Rodriguez Brindicci", tickets: 1, amount: 220, date: "23/04", fee: 7.70 },
       { name: "Michael R Hein", tickets: 1, amount: 220, date: "23/04", fee: 7.70 },
       { name: "Julie Ann Giachetti", tickets: 2, amount: 440, date: "25/04", fee: 15.40 },
+      { name: "Elin Mellanmyr", tickets: 1, amount: 220, date: "25/04", fee: 7.34 },
+      { name: "Joy Wsyne", tickets: 1, amount: 220, date: "25/04", fee: 7.70 },
+      { name: "Shelley Figueroa", tickets: 1, amount: 220, date: "25/04", fee: 5.14 },
     ],
   },
 
@@ -63,14 +66,13 @@ export const DATA = {
     subtitle: "April 26, 2026 — The Moore Club",
     buyers: [
       { name: "Paige Genen", tickets: 1, amount: 450, date: "02/03", fee: 15.75 },
-      { name: "Kelly Lehman", tickets: 8, amount: 4000, date: "10/03", fee: 140.00, vip: "VIP Table of 8" },
+      { name: "Kelly Lehman", tickets: 8, amount: 4000, date: "10/03", fee: 140.00 },
       { name: "Martha Duque", tickets: 1, amount: 450, date: "22/03", fee: 10.20 },
-      { name: "Sandra Santiago", tickets: 1, amount: 450, date: "24/03", fee: 10.20 },
       { name: "David Wippich", tickets: 1, amount: 450, date: "26/03", fee: 15.75 },
-      { name: "Daniel Beyda", tickets: 8, amount: 4000, date: "26/03", fee: 140.00, vip: "VIP Table of 8" },
+      { name: "Daniel Beyda", tickets: 8, amount: 4000, date: "26/03", fee: 140.00 },
       { name: "Karen Kennedy Page", tickets: 1, amount: 450, date: "26/03", fee: 10.20 },
       { name: "Sean Levine", tickets: 1, amount: 450, date: "31/03", fee: 15.75 },
-      { name: "Carla Guilhem", tickets: 6, amount: 3000, date: "01/04", fee: 66.30, vip: "VIP Table of 6" },
+      { name: "Carla Guilhem", tickets: 6, amount: 3000, date: "01/04", fee: 66.30 },
       { name: "Barbara Lamar", tickets: 1, amount: 450, date: "03/04", fee: 15.75 },
       { name: "Barbara Lamar", tickets: 1, amount: 450, date: "03/04", fee: 15.75 },
       { name: "Jelena Khurana", tickets: 1, amount: 450, date: "08/04", fee: 10.20 },
@@ -78,12 +80,12 @@ export const DATA = {
       { name: "Maciej Hanski", tickets: 2, amount: 900, date: "08/04", fee: 29.10 },
       { name: "Monique Kristine Pope", tickets: 1, amount: 450, date: "07/04", fee: 15.75 },
       { name: "Emma Vernetti", tickets: 1, amount: 450, date: "07/04", fee: 14.70 },
-      { name: "Chaqroun Karim", tickets: 8, amount: 4000, date: "07/04", fee: 128.30, vip: "VIP Table of 8" },
+      { name: "Chaqroun Karim", tickets: 8, amount: 4000, date: "07/04", fee: 128.30 },
       { name: "Monique Kristine Pope", tickets: 1, amount: 450, date: "06/04", fee: 10.20 },
       { name: "Tory Haskell", tickets: 1, amount: 450, date: "06/04", fee: 15.75 },
       { name: "Judy Schottenstein", tickets: 2, amount: 900, date: "09/04", fee: 31.50 },
       { name: "Mayi De La Vega", tickets: 2, amount: 900, date: "10/04", fee: 31.50 },
-      { name: "Slanie de Choiseul", tickets: 8, amount: 4000, date: "13/04", fee: 88.30, vip: "VIP Table of 8" },
+      { name: "Slanie de Choiseul", tickets: 8, amount: 4000, date: "13/04", fee: 88.30 },
       { name: "Amit Jain", tickets: 1, amount: 450, date: "13/04", fee: 15.75 },
       { name: "James Bernstein", tickets: 3, amount: 1350, date: "13/04", fee: 47.25 },
       { name: "Hilda Kinross", tickets: 1, amount: 450, date: "15/04", fee: 14.75 },
@@ -92,7 +94,7 @@ export const DATA = {
       { name: "R Lee Krelstein Jr", tickets: 2, amount: 900, date: "19/04", fee: 20.10 },
       { name: "Nicole Thalacker", tickets: 2, amount: 900, date: "19/04", fee: 31.50 },
       { name: "Margarita Bravo", tickets: 2, amount: 900, date: "20/04", fee: 31.50 },
-      { name: "Thomas F Shannon", tickets: 6, amount: 3000, date: "20/04", fee: 66.30, vip: "VIP Table of 6" },
+      { name: "Thomas F Shannon", tickets: 6, amount: 3000, date: "20/04", fee: 66.30 },
       { name: "Laura Khanna", tickets: 2, amount: 900, date: "20/04", fee: 31.50 },
       { name: "Guita Mortinger", tickets: 3, amount: 1350, date: "21/04", fee: 20.10 },
       { name: "Ashley Arguello", tickets: 1, amount: 450, date: "22/04", fee: 15.75 },
@@ -101,16 +103,17 @@ export const DATA = {
       { name: "Kim Perell", tickets: 3, amount: 1350, date: "23/04", fee: 47.25 },
       { name: "Jason Clarke", tickets: 1, amount: 450, date: "23/04", fee: 10.20 },
       { name: "Teresa Blumbergevents", tickets: 1, amount: 450, date: "23/04", fee: 10.20 },
+      { name: "Sandra Santiago", tickets: 1, amount: 450, date: "24/04", fee: 10.20 },
+      { name: "Fazeel Khan", tickets: 1, amount: 450, date: "25/04", fee: 10.20 },
     ],
   },
 
-  // ── TRANSFERS TO C+R ────────────────────────────────────
+  // ── TRANSFERS TO CASH & ROCKET ──────────────────────────
   transfers: [
-    { ref: "SUM001", amount: 5358.67, gbp: 4013.64, rate: 0.749, date: "19/03/26" },
-    { ref: "SUM002", amount: 5182.22, gbp: 3910.99, rate: 0.75, date: "30/03/26" },
-    { ref: "SUM003", amount: 12873.27, gbp: 9654.95, rate: 0.75, date: "09/04/26" },
-    { ref: "SUM004", amount: 9097.31, gbp: 6732.01, rate: 0.74, date: "16/04/26" },
-    { ref: "SUM005", amount: 7926.18, gbp: 5865.37, rate: 0.74, date: "20/04/26" },
-    { ref: "SUM006", amount: 11277.60, gbp: 8345.42, rate: 0.74, date: "24/04/26" },
+    { ref: "SUM001", amount: 5358.67, gbp: 4013.64, rate: 0.749, date: "19/03/2026" },
+    { ref: "SUM002", amount: 5182.22, gbp: 3910.99, rate: 0.75, date: "30/03/2026" },
+    { ref: "SUM003", amount: 12873.27, gbp: 9654.95, rate: 0.75, date: "09/04/2026" },
+    { ref: "SUM004", amount: 9097.31, gbp: 6732.01, rate: 0.74, date: "16/04/2026" },
+    { ref: "SUM005", amount: 7926.18, gbp: 5865.37, rate: 0.74, date: "20/04/2026" },
   ],
 };
