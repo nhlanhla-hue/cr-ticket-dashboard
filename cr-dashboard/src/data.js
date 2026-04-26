@@ -113,6 +113,7 @@ export const DATA = {
       { name: "Teresa Blumbergevents", tickets: 1, amount: 450, date: "23/04", fee: 10.20 },
       { name: "Sandra Santiago", tickets: 1, amount: 450, date: "24/04", fee: 10.20 },
       { name: "Fazeel Khan", tickets: 1, amount: 450, date: "25/04", fee: 10.20 },
+      { name: "Daniel Beyda", tickets: 2, amount: 900, date: "26/04", fee: 31.50 },
     ],
   },
 
