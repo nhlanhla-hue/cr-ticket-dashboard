@@ -1,11 +1,11 @@
 // ╔══════════════════════════════════════════════════════════════╗
 // ║  C+R TICKET SALES DATA — UPDATE THIS FILE ONLY             ║
-// ║  Last updated: 25 April 2026                                ║
-// ║  Source: C_R_TICKET_SALES spreadsheet as of 25/04/2026      ║
+// ║  Last updated: 26 April 2026                                ║
+// ║  Source: C_R_TICKET_SALES spreadsheet as of 26/04/2026      ║
 // ╚══════════════════════════════════════════════════════════════╝
 
 export const DATA = {
-  lastUpdated: "25 April 2026",
+  lastUpdated: "26 April 2026",
   exchangeRate: 0.74,
 
   // ── PALM BEACH ──────────────────────────────────────────
@@ -32,6 +32,14 @@ export const DATA = {
       { name: "Elin Mellanmyr", tickets: 1, amount: 220, date: "25/04", fee: 7.34 },
       { name: "Joy Wsyne", tickets: 1, amount: 220, date: "25/04", fee: 7.70 },
       { name: "Shelley Figueroa", tickets: 1, amount: 220, date: "25/04", fee: 5.14 },
+      { name: "Kenneth Baboun", tickets: 1, amount: 220, date: "26/04", fee: 7.70 },
+      { name: "John Delp", tickets: 2, amount: 440, date: "26/04", fee: 15.40 },
+      { name: "Gina Zeitlin", tickets: 2, amount: 440, date: "26/04", fee: 9.98 },
+      { name: "Joseph Sambuco", tickets: 1, amount: 220, date: "26/04", fee: 7.70 },
+      { name: "John Hooff", tickets: 1, amount: 220, date: "26/04", fee: 7.70 },
+      { name: "Jessica Weale", tickets: 1, amount: 220, date: "26/04", fee: 7.70 },
+      { name: "Alexander B Powers", tickets: 1, amount: 220, date: "26/04", fee: 7.70 },
+      { name: "Joe Sambuco", tickets: 1, amount: 220, date: "26/04", fee: 7.70 },
     ],
   },
 
