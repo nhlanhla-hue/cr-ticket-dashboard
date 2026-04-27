@@ -1,11 +1,11 @@
 // ╔══════════════════════════════════════════════════════════════╗
 // ║  C+R TICKET SALES DATA — UPDATE THIS FILE ONLY             ║
-// ║  Last updated: 26 April 2026                                ║
-// ║  Source: C_R_TICKET_SALES spreadsheet as of 26/04/2026      ║
+// ║  Last updated: 27 April 2026                                ║
+// ║  Source: C_R_TICKET_SALES spreadsheet as of 27/04/2026      ║
 // ╚══════════════════════════════════════════════════════════════╝
 
 export const DATA = {
-  lastUpdated: "26 April 2026",
+  lastUpdated: "27 April 2026",
   exchangeRate: 0.74,
 
   // ── PALM BEACH ──────────────────────────────────────────
