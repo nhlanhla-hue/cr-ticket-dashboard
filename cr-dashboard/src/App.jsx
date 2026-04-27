@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { DATA } from "./data.js";
 
 // ── HELPERS ─────────────────────────────────────────────
@@ -43,6 +43,20 @@ function StatCard({ label, value, sub, accent }) {
   );
 }
 
+function TourCompleteBadge() {
+  return (
+    <div style={{
+      display: "inline-flex", alignItems: "center", gap: 6,
+      background: "rgba(45, 138, 78, 0.15)", border: "1px solid rgba(45, 138, 78, 0.3)",
+      borderRadius: 20, padding: "5px 14px", marginTop: 8,
+      animation: "fadeIn 1s ease-in-out",
+    }}>
+      <span style={{ fontSize: 12 }}>✓</span>
+      <span style={{ fontSize: 11, fontWeight: 600, color: "#2d8a4e", letterSpacing: 0.5, textTransform: "uppercase" }}>Tour Complete</span>
+    </div>
+  );
+}
+
 function EventSection({ event, index, defaultOpen }) {
   const [open, setOpen] = useState(defaultOpen);
   const stats = eventStats(event);
@@ -59,7 +73,14 @@ function EventSection({ event, index, defaultOpen }) {
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <span style={{ fontSize: 22 }}>{icons[index]}</span>
           <div>
-            <div style={{ fontSize: 16, fontWeight: 700, color: "#1a2332", fontFamily: "'DM Sans', sans-serif" }}>{event.title}</div>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <span style={{ fontSize: 16, fontWeight: 700, color: "#1a2332", fontFamily: "'DM Sans', sans-serif" }}>{event.title}</span>
+              <span style={{
+                fontSize: 9, fontWeight: 700, color: "#2d8a4e",
+                background: "rgba(45, 138, 78, 0.12)", padding: "2px 8px",
+                borderRadius: 10, letterSpacing: 0.3, textTransform: "uppercase",
+              }}>Complete</span>
+            </div>
             <div style={{ fontSize: 11, color: "#6b7280", marginTop: 2 }}>{event.subtitle}</div>
           </div>
         </div>
@@ -168,15 +189,22 @@ export default function App() {
   return (
     <div style={{ minHeight: "100vh", background: "#f5f7fa", fontFamily: "'DM Sans', -apple-system, sans-serif" }}>
       <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(-4px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
 
       {/* Header */}
       <div style={{ background: "linear-gradient(135deg, #1a2332 0%, #2d3748 100%)", padding: "24px 0 20px", borderBottom: "3px solid #b93535" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 20px" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 12 }}>
             <div>
               <div style={{ fontSize: 10, fontWeight: 700, color: "#f87171", textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 4 }}>Cash & Rocket</div>
               <div style={{ fontSize: 22, fontWeight: 700, color: "white", fontFamily: "'DM Sans', sans-serif" }}>USA Tour 2026 — Ticket Sales</div>
               <div style={{ fontSize: 12, color: "#94a3b8", marginTop: 4 }}>Charleston → Palm Beach → Miami</div>
+              <TourCompleteBadge />
             </div>
             <div style={{ textAlign: "right" }}>
               <div style={{ fontSize: 10, color: "#94a3b8", textTransform: "uppercase", letterSpacing: 0.5 }}>Last updated</div>
