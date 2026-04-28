@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { DATA } from "./data.js";
 
 // ── HELPERS ─────────────────────────────────────────────
@@ -9,22 +9,14 @@ function computeStats(data) {
   const events = [data.palmBeach, data.charleston, data.miami];
   let totalTickets = 0, totalAmount = 0, totalFees = 0;
   events.forEach((ev) => {
-    ev.buyers.forEach((b) => {
-      totalTickets += b.tickets;
-      totalAmount += b.amount;
-      totalFees += b.fee;
-    });
+    totalTickets += ev.tickets;
+    totalAmount += ev.gross;
+    totalFees += ev.fees;
   });
   const totalTransferred = data.transfers.reduce((s, t) => s + t.amount, 0);
   const netReceived = totalAmount - totalFees;
   const held = netReceived - totalTransferred;
   return { totalTickets, totalAmount, totalFees, netReceived, totalTransferred, held };
-}
-
-function eventStats(ev) {
-  let tickets = 0, amount = 0, fees = 0;
-  ev.buyers.forEach((b) => { tickets += b.tickets; amount += b.amount; fees += b.fee; });
-  return { tickets, amount, fees };
 }
 
 // ── COMPONENTS ──────────────────────────────────────────
@@ -57,18 +49,17 @@ function TourCompleteBadge() {
   );
 }
 
-function EventSection({ event, index, defaultOpen }) {
-  const [open, setOpen] = useState(defaultOpen);
-  const stats = eventStats(event);
+function EventSection({ event, index }) {
   const colors = ["#2d8a4e", "#c4841d", "#b93535"];
   const bgs = ["#ecfdf3", "#fef9ec", "#fef2f2"];
   const icons = ["🌴", "🏛️", "🔥"];
+  const net = event.gross - event.fees;
 
   return (
     <div style={{ background: "white", borderRadius: 12, overflow: "hidden", boxShadow: "0 1px 3px rgba(0,0,0,0.06)", border: "1px solid #e8ecf0", marginBottom: 16 }}>
-      <div onClick={() => setOpen(!open)} style={{
-        padding: "16px 20px", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "space-between",
-        background: bgs[index], borderBottom: open ? "1px solid #e8ecf0" : "none",
+      <div style={{
+        padding: "16px 20px", display: "flex", alignItems: "center", justifyContent: "space-between",
+        background: bgs[index],
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <span style={{ fontSize: 22 }}>{icons[index]}</span>
@@ -84,40 +75,25 @@ function EventSection({ event, index, defaultOpen }) {
             <div style={{ fontSize: 11, color: "#6b7280", marginTop: 2 }}>{event.subtitle}</div>
           </div>
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <div style={{ textAlign: "right" }}>
-            <div style={{ fontSize: 18, fontWeight: 700, color: colors[index], fontFamily: "'DM Sans', sans-serif" }}>{fmt(stats.amount)}</div>
-            <div style={{ fontSize: 11, color: "#6b7280" }}>{stats.tickets} tickets</div>
-          </div>
-          <span style={{ fontSize: 16, color: "#9ca3af", transform: open ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.2s", display: "inline-block" }}>▼</span>
+        <div style={{ textAlign: "right" }}>
+          <div style={{ fontSize: 18, fontWeight: 700, color: colors[index], fontFamily: "'DM Sans', sans-serif" }}>{fmt(event.gross)}</div>
+          <div style={{ fontSize: 11, color: "#6b7280" }}>{event.tickets} tickets • {event.purchases} purchases</div>
         </div>
       </div>
-      {open && (
-        <div style={{ padding: "0 20px 14px", overflowX: "auto" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
-            <thead>
-              <tr style={{ borderBottom: "2px solid #e8ecf0" }}>
-                {["Buyer", "Tickets", "Amount", "Date"].map((h, i) => (
-                  <th key={h} style={{ padding: "10px 6px", textAlign: i === 0 ? "left" : i === 1 ? "center" : "right", color: "#6b7280", fontWeight: 600, fontSize: 10, textTransform: "uppercase", letterSpacing: 0.5 }}>{h}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {event.buyers.map((b, i) => (
-                <tr key={i} style={{ borderBottom: "1px solid #f3f4f6" }}>
-                  <td style={{ padding: "9px 6px" }}>
-                    <span style={{ fontWeight: 500, color: "#1a2332" }}>{b.name}</span>
-                    {b.vip && <span style={{ marginLeft: 8, fontSize: 9, fontWeight: 700, background: colors[index] + "18", color: colors[index], padding: "2px 7px", borderRadius: 10 }}>{b.vip}</span>}
-                  </td>
-                  <td style={{ padding: "9px 6px", textAlign: "center", color: "#4b5563" }}>{b.tickets}</td>
-                  <td style={{ padding: "9px 6px", textAlign: "right", fontWeight: 600, color: "#1a2332", fontFamily: "'DM Sans', sans-serif" }}>{fmt(b.amount)}</td>
-                  <td style={{ padding: "9px 6px", textAlign: "right", color: "#9ca3af", fontSize: 12 }}>{b.date}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      <div style={{ padding: "12px 20px", display: "flex", gap: 24, flexWrap: "wrap" }}>
+        <div>
+          <div style={{ fontSize: 10, fontWeight: 600, color: "#8a919c", textTransform: "uppercase", letterSpacing: 0.5 }}>Gross</div>
+          <div style={{ fontSize: 15, fontWeight: 700, color: "#1a2332", fontFamily: "'DM Sans', sans-serif", marginTop: 2 }}>{fmt(event.gross)}</div>
         </div>
-      )}
+        <div>
+          <div style={{ fontSize: 10, fontWeight: 600, color: "#8a919c", textTransform: "uppercase", letterSpacing: 0.5 }}>Stripe Fees</div>
+          <div style={{ fontSize: 15, fontWeight: 700, color: "#dc2626", fontFamily: "'DM Sans', sans-serif", marginTop: 2 }}>-{fmt(event.fees)}</div>
+        </div>
+        <div>
+          <div style={{ fontSize: 10, fontWeight: 600, color: "#8a919c", textTransform: "uppercase", letterSpacing: 0.5 }}>Net Received</div>
+          <div style={{ fontSize: 15, fontWeight: 700, color: "#2d8a4e", fontFamily: "'DM Sans', sans-serif", marginTop: 2 }}>{fmt(net)}</div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -227,7 +203,7 @@ export default function App() {
       {/* Events */}
       <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 20px" }}>
         {events.map((ev, i) => (
-          <EventSection key={i} event={ev} index={i} defaultOpen={i === 2} />
+          <EventSection key={i} event={ev} index={i} />
         ))}
       </div>
 
