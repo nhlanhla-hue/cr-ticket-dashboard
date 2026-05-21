@@ -139,6 +139,9 @@ export const DATA = {
     { ref: "SUM006", amount: 11277.60, gbp: 8345.42, rate: 0.74, date: "24/04/2026" },
     { ref: "SUM007", amount: 6677.28, gbp: 4941.19, rate: 0.74, date: "26/04/2026" },
     { ref: "SUM008", amount: 3081.16, gbp: 2280.06, rate: 0.74, date: "27/04/2026" },
+    { ref: "SUM008", amount: 3081.16, gbp: 2280.06, rate: 0.74, date: "27/04/2026" },
     { ref: "SUM009", amount: 2933.45, gbp: 2170.75, rate: 0.74, date: "01/05/2026" },
+  ],
+};
   ],
 };
