@@ -8,7 +8,7 @@
 export const DATA = {
   lastUpdated: "21 May 2026",
   exchangeRate: 0.74,
-  tourComplete: true,
+
 
   // ── PALM BEACH ──────────────────────────────────────────
   palmBeach: {
